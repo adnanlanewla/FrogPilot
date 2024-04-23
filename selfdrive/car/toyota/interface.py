@@ -159,13 +159,13 @@ class CarInterface(CarInterfaceBase):
 
       # In MPH  = [  0,  27]
       tune.kiBP = [ 0.,  12]
-      tune.kiV =  [.35, .25]
+      tune.kiV =  [.42, .35]
 
       if candidate in TSS2_CAR:
         ret.vEgoStopping = 0.1
         ret.vEgoStarting = 0.1
-        ret.longitudinalActuatorDelayLowerBound = 0.3
-        ret.longitudinalActuatorDelayUpperBound = 0.4
+        ret.longitudinalActuatorDelayLowerBound = 0.2
+        ret.longitudinalActuatorDelayUpperBound = 0.3
     elif (candidate in TSS2_CAR or ret.enableGasInterceptor) and params.get_bool("DragonPilotTune"):
       # Credit goes to the DragonPilot team!
       tune.deadzoneBP = [0., 16., 20., 30.]
